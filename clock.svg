@@ -1,0 +1,49 @@
+<svg version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="stopwatch" overflow="hidden">
+    
+    <defs>
+    
+        <style type="text/css"><![CDATA[
+        
+            .sekundenzeiger {
+                stroke: red;
+                stroke-width: 5;
+                stroke-linecap: round;
+                fill: red;
+            }
+
+            .markierung {
+                stroke: black;
+                stroke-width: 4;
+            }
+
+        ]]></style>
+    
+    </defs>
+    <!-- start / stop knopf -->
+    <path d="M43 10 V 2 H 57 V 10" class="markierung" stroke-linejoin="round" fill="none"/>
+    <!-- gehaeuse: ebauche ;-) -->
+    <circle cx="50" cy="50" r="40" fill="none" class="markierung"/>  
+    <!-- 0, 3, 6, 9 Uhr -->
+    <path d="M50 10 V 20" class="markierung" transform="rotate(0 50 50)"/>
+    <path d="M50 10 V 20" class="markierung" transform="rotate(90 50 50)"/>
+    <path d="M50 10 V 20" class="markierung" transform="rotate(180 50 50)"/>
+    <path d="M50 10 V 20" class="markierung" transform="rotate(270 50 50)"/>
+    <!-- 1, 2, 4, 5, 7, 8, 10, 10 Uhr -->
+    <path d="M50 10 V 17" class="markierung" transform="rotate(30 50 50)"/>
+    <path d="M50 10 V 17" class="markierung" transform="rotate(60 50 50)"/>
+    <path d="M50 10 V 17" class="markierung" transform="rotate(120 50 50)"/>
+    <path d="M50 10 V 17" class="markierung" transform="rotate(150 50 50)"/>
+    <path d="M50 10 V 17" class="markierung" transform="rotate(210 50 50)"/>
+    <path d="M50 10 V 17" class="markierung" transform="rotate(240 50 50)"/>
+    <path d="M50 10 V 17" class="markierung" transform="rotate(300 50 50)"/>
+    <path d="M50 10 V 17" class="markierung" transform="rotate(330 50 50)"/>
+    <!-- sekundenzeiger -->
+    <path d="M50 50 V 25" class="sekundenzeiger" >
+		<animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 50 50" to="360 50 50" dur="60s" repeatCount="indefinite" />
+	</path>
+    <circle cx="50" cy="50" r="3" class="sekundenzeiger" /> 
+    <!-- zuruecksetzen / rundenzeit knoepfe -->
+    <path d="M50 10 V 4" class="markierung" transform="rotate(40 50 50)" stroke-linecap="round"/>
+    <path d="M50 10 V 4" class="markierung" transform="rotate(-40 50 50)" stroke-linecap="round"/>                             
+    
+</svg>
